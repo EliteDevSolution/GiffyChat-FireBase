@@ -1,0 +1,495 @@
+/* CSS styles only mean as placeholders.
+ Front end team will decide how the final product will look */
+body,html
+    {
+        background-image: url(bg/bg_1.jpg);
+        margin: 0;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-color:#464646;
+        animation: animatedBackground 40s linear infinite;
+    }
+
+    @keyframes animatedBackground {
+        from { background-position: 0 0; }
+        to { background-position: 100% 0; }
+    }
+    .bg-layer {
+       background-color: rgba(0, 0, 0, 0.7);
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+         background-size: cover;
+         position: absolute;
+         margin-top: -25vh;
+         min-height: 125vh;
+    } 
+  .bg-dark 
+  {
+      opacity: 0.9;
+      background-color: #292b2d !important;
+  }
+
+.modal-color
+{
+    opacity: 0.9;
+    background-color: #292b2d !important;
+    color: white;   
+}
+
+@keyframes animatedBackground {
+    from { background-position: 0 0; }
+    to { background-position: 100% 0; }
+}
+
+#message-box {
+    margin-top: 5vh;
+}
+
+#gif-choose {
+    min-height: 575px;
+    background-color: rgb(99, 77, 226);
+}
+
+#entry-field {
+    min-height: 50px;
+    background-color: antiquewhite;
+    margin: 5px;
+}
+
+.gif-bubble {
+    display: flex;
+    width: 250px;
+    margin: 2px;
+    padding: 20px;
+    background-color: goldenrod;
+}
+
+#midSection {
+    margin-top: 20vh; 
+}
+
+.flip-card {
+        background-color: transparent;
+        width: 250px;
+        height: 100px;
+        margin-bottom: 10vh;
+    }
+
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: rgba(255, 255, 255, 0);
+    color: black;
+}
+
+.flip-card-back {
+        background-color: #2980b9;
+        border-radius: 5px;
+        text-align: center;
+        box-shadow: 0 1px 0.5px #231b1b;
+        cursor: pointer;
+        color: rgb(249, 255, 0);
+        width: 236px;
+        height: 180px;
+        transform: rotateY(180deg);
+    }
+
+form.jumbotron{
+    top:20%;
+    right: 0px;
+    margin: 0px auto;   
+    width: 400px;
+    position: relative; 
+    background-color: rgba(24, 26, 27, 0.04);
+    box-shadow: rgba(0, 0, 0, 0.75) -1px 4px 28px 0px;
+    border-radius: 0px;
+}
+#userLogSection{
+    color: white;
+    font-size: 26px;
+}
+#signUpBtn,#logoutBtn 
+{
+    opacity: 0.9;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 0px;
+    font-family: 'Hind', sans-serif;
+}
+
+#txtsignup{
+    text-align: center  !important;
+}
+
+#userName, #inputPassword1, #inputPassword2 {
+    border-radius: 0px;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-image: none;
+    opacity: 0.7;
+    color: white;
+    margin-top: 15px;
+    margin-bottom:15px;
+}
+
+#dropdownMenu1
+{
+  border-radius: 0px;
+  color: #dee7f0;
+}
+
+#alertMessage {
+    border-radius: 0px;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0.9;
+    color: red;
+    font-size: 15px;
+}
+
+.heading-avatar-icon{
+  text-align: center !important; 
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin-left: 35%;
+}
+
+#loginDropdown {
+    width: 350px;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-image: none;
+    opacity: 0.8;
+}
+
+/*                  
+    Start
+
+*/
+
+    .chat{
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    .card{
+      height: 500px;
+      border-radius: 15px !important;
+      background-color: rgba(0,0,0,0.4) !important;
+    }
+    .contacts_body{
+      padding:  0.75rem 0 !important;
+      overflow-y: auto;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    li:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .msg_card_body{
+      overflow-y: auto;
+    }
+    .card-header{
+      border-radius: 15px 15px 0 0 !important;
+      border-bottom: 0 !important;
+    }
+   .card-footer{
+    border-radius: 0 0 15px 15px !important;
+      border-top: 0 !important;
+  }
+    .container{
+      align-content: center;
+    }
+    .search{
+      border-radius: 15px 0 0 15px !important;
+      background-color: rgba(0,0,0,0.3) !important;
+      border:0 !important;
+      color:white !important;
+    }
+    .search:focus{
+         box-shadow:none !important;
+           outline:0px !important;
+    }
+    .type_msg{
+      background-color: rgba(0,0,0,0.3) !important;
+      border:0 !important;
+      color:white !important;
+      height: 60px !important;
+      overflow-y: auto;
+    }
+      .type_msg:focus{
+         box-shadow:none !important;
+           outline:0px !important;
+    }
+    .attach_btn{
+  border-radius: 15px 0 0 15px !important;
+  background-color: rgba(0,0,0,0.3) !important;
+      border:0 !important;
+      color: white !important;
+      cursor: pointer;
+    }
+    .send_btn{
+  border-radius: 0 15px 15px 0 !important;
+  background-color: rgba(0,0,0,0.3) !important;
+      border:0 !important;
+      color: white !important;
+      cursor: pointer;
+    }
+    .search_btn{
+      border-radius: 0 15px 15px 0 !important;
+      background-color: rgba(0,0,0,0.3) !important;
+      border:0 !important;
+      color: white !important;
+      cursor: pointer;
+    }
+    .contacts{
+      list-style: none;
+      padding: 0;
+    }
+    .contacts li{
+      width: 100% !important;
+      padding: 5px 10px;
+      margin-bottom: 15px !important;
+    }
+  .active{
+      background-color: rgba(0,0,0,0.3);
+  }
+    .user_img{
+      height: 70px;
+      width: 70px;
+      border:1.5px solid #f5f6fa;
+    
+    }
+    .user_img_msg{
+      height: 40px;
+      width: 40px;
+      border:1.5px solid #f5f6fa;
+    
+    }
+  .img_cont{
+      position: relative;
+      height: 70px;
+      width: 70px;
+  }
+  .img_cont_msg{
+      height: 40px;
+      width: 40px;
+  }
+  .online_icon{
+    position: absolute;
+    height: 15px;
+    width:15px;
+    background-color: #4cd137;
+    border-radius: 50%;
+    bottom: 0.2em;
+    right: 0.4em;
+    border:1.5px solid white;
+  }
+  .offline{
+    background-color: #c23616 !important;
+  }
+  .user_info{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 15px;
+  }
+  .user_info span{
+    font-size: 20px;
+    color: white;
+  }
+  .user_info p{
+  font-size: 10px;
+  color: rgba(255,255,255,0.6);
+  }
+  .video_cam{
+    margin-left: 50px;
+    margin-top: 5px;
+  }
+  .video_cam span{
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  .msg_cotainer{
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 25px;
+    background-color: #485a17c2;
+    padding: 10px;
+    position: relative;
+  }
+  .msg_cotainer_send{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 10px;
+    border-radius: 25px;
+    background-color: #82ccdd;
+    opacity: 0.9;
+    padding: 10px;
+    position: relative;
+  }
+  .msg_time{
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    color: rgba(255,255,255,0.5);
+    font-size: 10px;
+  }
+  .msg_time_send{
+    position: absolute;
+    right:0;
+    bottom: -15px;
+    color: rgba(255,255,255,0.5);
+    font-size: 10px;
+  }
+  .msg_head{
+    position: relative;
+  }
+  #action_menu_btn{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  .action_menu{
+    z-index: 1;
+    position: absolute;
+    padding: 15px 0;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border-radius: 15px;
+    top: 30px;
+    right: 15px;
+    display: none;
+  }
+  .action_menu ul{
+    list-style: none;
+    padding: 0;
+  margin: 0;
+  }
+  .action_menu ul li{
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+  }
+  .action_menu ul li i{
+    padding-right: 10px;
+  
+  }
+  .action_menu ul li:hover{
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.2);
+  }
+
+  .chat_list:hover {
+    background-color: #1c1c20;
+}
+
+    .imagetmp {
+      position: absolute;
+      bottom: 55px;
+      background: rgb(51, 51, 54);
+      display: none;
+      padding: 10px 5px 5px 10px !important;
+      margin: 0 !important;
+      z-index: 1000;
+      scroll-behavior: none;
+      overflow-y: auto;
+      overflow-x: hidden;
+      -ms-overflow-x: hidden;
+      -ms-overflow-y: hidden;
+      width: 100%;
+    }
+
+    .img-item:hover {opacity: 1}
+    .imagetmp #reviewImg {
+        width: 100%;
+        display: block;
+    }
+
+    .img-msg-item
+    {
+        width: 220px;
+        height: 180px;
+        border-radius: 5px;
+        box-shadow: 0 1px 0.5px #231b1b;
+        cursor: pointer;
+    }
+
+    .img-item
+    {
+        width: 90px;
+        height: 80px;
+        border-radius: 10px;
+        box-shadow: 0 1px 0.5px #231b1b;
+        cursor: pointer;
+        padding: 5px 5px 5px 5px !important;
+        opacity: 0.7;
+        transition: 0.3s;
+    } 
+
+    #gif-message-text{
+        border-radius: 10px;
+        box-shadow: 0 1px 0.5px #231b1b;
+        padding: 5px 5px 5px 5px !important;
+        opacity: 0.8;
+        transition: 0.3s;
+    }
+
+  @media(max-width: 575px){
+    .contacts_card{
+      margin-bottom: 15px !important;
+    }
+    #midSection {
+      margin-top: 12vh; 
+    }
+    .bg-layer {
+       background-color: rgba(0, 0, 0, 0.7);
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+         background-size: cover;
+         position: absolute;
+         margin-top: -25vh;
+         min-height: 165vh;
+    }
+  }
+
+  @media(max-width: 400px){
+    #midSection {
+     margin-top: 12vh;
+   }
+   .bg-layer {
+       background-color: rgba(0, 0, 0, 0.7);
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+         background-size: cover;
+         position: absolute;
+         margin-top: -25vh;
+         min-height: 180vh;
+    }
+  }

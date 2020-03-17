@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project 1</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/
+        malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="assets/style.css">
+    
+</head>
+<body>
+    <div class="container-fluid h-100 bg-layer">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" role="navigation">
+                        <div class="container">
+                            <a class="navbar-brand" href="#">GiffyChat</a>
+                            <button class="navbar-toggler border-0" type="button" data-toggle="collapse"
+                                data-target="#exCollapsingNavbar">
+                                &#9776;
+                            </button>
+                            <div class="collapse navbar-collapse" id="exCollapsingNavbar">
+                                <ul class="nav navbar-nav">
+                                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                                    <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
+                                    <li class="nav-item"><a href="#" class="nav-link">Service</a></li>
+                                    <li class="nav-item"><a href="#" class="nav-link">More</a></li>
+                                </ul>
+                                <ul class="nav navbar-nav flex-row justify-content-between ml-auto">
+                                    <li class="nav-item order-2 order-md-1"><a href="#" class="nav-link"
+                                            title="settings"><i class="fa fa-cog fa-fw fa-lg"></i></a></li>
+                                    <li class="dropdown order-1">
+                                        <button type="button" id="dropdownMenu1" data-toggle="dropdown"
+                                            class="btn btn-outline-secondary dropdown-toggle">Login<span
+                                                class="caret"></span></button>
+                                        <button id="logoutBtn" type="submit" class="btn btn-outline-secondary"
+                                            style="display: none;">Logout</button>
+                                        <ul class="dropdown-menu dropdown-menu-right mt-2" id="loginDropdown">
+                                            <li class="px-3 py-2">
+                                                <form class="form" role="form">
+                                                    <div class="form-group">
+                                                        <input id="emailInput" placeholder="Username"
+                                                            class="form-control form-control-sm" type="text"
+                                                            required="">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input id="passwordInput" placeholder="Password"
+                                                            class="form-control form-control-sm" type="password"
+                                                            required="">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <button type="submit" class="btn btn-primary btn-block"
+                                                            id="loginBtn">Login</button>
+                                                    </div>
+                                                    <div class="form-group text-center">
+                                                        <small><a href="#" data-toggle="modal"
+                                                                data-target="#modalPassword">Forgot
+                                                                password?</a></small>
+                                                    </div>
+                                                </form>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <div id="modalPassword" class="modal fade" tabindex="-1" role="dialog"
+                        aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content modal-color">
+                                <div class="modal-header">
+                                    <h3>Forgot password</h3>
+                                    <button type="button" class="close font-weight-light" data-dismiss="modal"
+                                        aria-hidden="true">×</button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Reset your password..</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                                    <button class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="container-fluid" id="userLogSection">
+            <div class="row">
+                <div class="col-12">
+                    <form class="jumbotron">
+                        <h2 for="newUser" id="txtsignup">Sign Up</h2>
+                        <div class="alert alert-danger" id="alertMessage" role="alert" style="display: none;">
+                        </div>
+                        <img src="assets/bg/user_start.jpg" class="heading-avatar-icon" />
+                        <div class="form-group">
+                            <!-- <label for="userName"> Create Username</label> -->
+                            <input type="text" class="form-control" id="userName" placeholder="Enter Username">
+                            <small id="username" class="form-text text-muted">We'll never share your username with
+                                anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <!-- <label for="inputPassword1">Create Password</label> -->
+                            <input type="password" class="form-control" id="inputPassword1" placeholder="Password">
+                            <!-- <label for="inputPassword2">Confirm Password</label> -->
+                            <input type="password" class="form-control" id="inputPassword2"
+                                placeholder="Confirm Password">
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="signUpBtn">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="container-fluid h-100" id="midSection" style="display: none;">
+            <div class="row justify-content-center h-100">
+                <div class="col-md-4 col-xl-3 chat"><div class="card mb-sm-3 mb-md-0 contacts_card">
+                    <div class="card-header">
+                        <div class="input-group">
+                            <input type="text" placeholder="Search..." name="" class="form-control search">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text search_btn"><i class="fas fa-search"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body contacts_body">
+                        <ui class="contacts" id="userListSection">
+                            <!-- User List -->
+                        </ui>
+                    </div>
+                    <div class="card-footer"></div>
+                </div></div>
+                <div class="col-md-8 col-xl-6 chat">
+                    <div class="card">
+                        <div class="card-header msg_head">
+                            <div class="d-flex bd-highlight">
+                                <div class="img_cont">
+                                    <img src="https://2.bp.blogspot.com/-8ytYF7cfPkQ/WkPe1-rtrcI/AAAAAAAAGqU/FGfTDVgkcIwmOTtjLka51vineFBExJuSACLcBGAs/s320/31.jpg" class="rounded-circle user_img" class="rounded-circle user_img">
+                                    <span class="online_icon"></span>
+                                </div>
+                                <div class="user_info">
+                                    <span id='realusername'>Chat with Maryam Naz</span>
+                                    <p>1767 Messages</p>
+                                </div>
+                            </div>
+                            <span id="action_menu_btn"><i class="fas fa-ellipsis-v"></i></span>
+                            <div class="action_menu">
+                                <ul>
+                                    <li><i class="fas fa-user-circle"></i> View profile</li>
+                                    <li><i class="fas fa-users"></i> Add to close friends</li>
+                                    <li><i class="fas fa-plus"></i> Add to group</li>
+                                    <li><i class="fas fa-ban"></i> Block</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-body msg_card_body" id="msg-content">
+                            <!-- <div class="d-flex justify-content-start mb-4">
+                                <div class="img_cont_msg">
+                                    <img src="https://devilsworkshop.org/files/2013/01/enlarged-facebook-profile-picture.jpg" class="rounded-circle user_img_msg">
+                                </div>
+                                <div class="msg_cotainer">
+                                   <div class="flip-card">
+                                        <div class="flip-card-inner">
+                                            <div class="flip-card-front">
+                                                <img class="img-msg-item" src="https://media.tenor.com/images/cee1749c885ed0cc6f62ead47f255922/tenor.gif">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="msg_time">8:40 AM, Today</span>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-end mb-4">
+                                <div class="msg_cotainer_send">
+                                    Hi Maryam i am good tnx how about you?
+                                    <span class="msg_time_send">8:55 AM, Today</span>
+                                </div>
+                                <div class="img_cont_msg">
+                            <img src="" class="rounded-circle user_img_msg">
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="card-footer">
+                            <div class="input-group">
+                                <div class="input-group-append">
+                                    <span class="input-group-text attach_btn"><i class="fas fa-paperclip"></i></span>
+                                </div>
+                                <div class="imagetmp">
+                                    <div id="reviewImg">
+                                    </div>
+                                </div>
+                                <input name="" id="input-msg" class="form-control type_msg" placeholder="Type a keyword..." />
+                                <div class="input-group-append">
+                                    <span class="input-group-text send_btn"><i class="fas fa-location-arrow"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+<!----------------Preview modal HTML goes here-------------------------------------------------->
+    <div class="modal fade" id="gifModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content modal-color">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">What's your message?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="gif-preview"></div>
+                    <div class="form-group">
+                        <label for="gif-message-text" class="col-form-label">Message:</label>
+                        <input name="" id="gif-message-text" class="form-control type_msg" placeholder="What do you mean...?" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" id="append-gif" class="btn btn-primary">Send message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-------- Additional scripts needed, including firebase scripts will go here------->
+    <script type="text/javascript" src="assets/app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-performance.js"></script>
+
+    <script>
+        $('#userName').focus();
+
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDOJvTCcUZzEuqcxfRYKEZnI6O4yE3bK0Y",
+            authDomain: "giphy-messenger.firebaseapp.com",
+            databaseURL: "https://giphy-messenger.firebaseio.com",
+            projectId: "giphy-messenger",
+            storageBucket: "giphy-messenger.appspot.com",
+            messagingSenderId: "364972542348",
+            appId: "1:364972542348:web:824ee9fa42e36fa3"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
